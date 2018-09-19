@@ -1,4 +1,4 @@
-package amazonTest;
+package competition.amazonTest;
 
 import java.util.Stack;
 

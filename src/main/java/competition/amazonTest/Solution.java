@@ -1,4 +1,4 @@
-package amazonTest;
+package competition.amazonTest;
 
 public class Solution {
     public static Node root;
