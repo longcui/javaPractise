@@ -21,7 +21,11 @@ public class FileTest {
 
         URL url = file.toURI().toURL();
         System.out.println(url.toString());
+    }
 
-
+    @Test(expected = IOException.class)     //access is denied
+    public void testWritePermission() throws IOException {
+        File file = new File("C:\\price_.xlsx");
+        file.createNewFile();
     }
 }
