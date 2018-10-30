@@ -1,4 +1,4 @@
-package file.java8;
+package list;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by long on 11.07.2017.
  */
-public class PerformanceTest {
+public class StreamPerformanceTest {
 
 //    /**nearly same time
     @Test
