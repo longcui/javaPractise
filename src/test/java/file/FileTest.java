@@ -26,7 +26,7 @@ public class FileTest {
         }
     }
 
-    @Test(expected = IOException.class)     //access is denied
+//    @Test(expected = IOException.class)     //access is denied
     public void testWritePermission() throws IOException {
         if(OS.contains("win")) {
             File file = new File("C:\\price_.xlsx");
