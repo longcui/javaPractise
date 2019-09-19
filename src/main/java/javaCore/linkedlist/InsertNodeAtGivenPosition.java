@@ -68,12 +68,8 @@ public class InsertNodeAtGivenPosition {
         SinglyLinkedListNode tmp = head;
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
-        for (int i = 0; i < position - 1; i++) {
+        for (int i = 0; i < position - 1 && tmp.next != null; i++) {
             tmp = tmp.next;
-
-            if(tmp.next == null) {
-                break;
-            }
         }
 
         newNode.next = tmp.next;
