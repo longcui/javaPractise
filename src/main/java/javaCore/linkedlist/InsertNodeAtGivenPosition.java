@@ -1,12 +1,7 @@
-package javaCoreTest.linkedlist;
+package javaCore.linkedlist;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class InsertNodeAtGivenPosition {
 
@@ -66,11 +61,19 @@ public class InsertNodeAtGivenPosition {
      *
      */
     static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+        if(head == null) {
+            return null;
+        }
+
         SinglyLinkedListNode tmp = head;
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
         for (int i = 0; i < position - 1; i++) {
             tmp = tmp.next;
+
+            if(tmp.next == null) {
+                break;
+            }
         }
 
         newNode.next = tmp.next;
@@ -85,5 +88,6 @@ public class InsertNodeAtGivenPosition {
 
         return head;
     }
+
 }
 
