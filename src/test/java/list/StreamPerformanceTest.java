@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class StreamPerformanceTest {
 
 //    /**nearly same time
-    @Test
+//    @Test
     public void testLoopingList() {
         ArrayList<Integer> integers = new ArrayList<>();
         long cnt = 100000L;

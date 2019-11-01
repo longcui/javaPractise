@@ -20,7 +20,7 @@ public class RegexExample {
      */
     public void tet2() {
         Pattern pattern = Pattern.compile("\\d\\d\\D\\d\\d\\D\\d\\d\\d\\d");
-        Assert.assertTrue(pattern.matcher("f").matches());
+        Assert.assertFalse(pattern.matcher("f").matches());
 //        Assert.assertTrue(pattern.matcher("abc.dfe.ftd.").matches());
     }
 
