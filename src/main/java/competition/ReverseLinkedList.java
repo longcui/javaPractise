@@ -8,11 +8,11 @@ Interval questions with Miles as
 
 public class ReverseLinkedList {
 
-    static class Node {
+    public static class Node {
         int data;
         Node next;
 
-        Node(int data, Node next) {
+        public Node(int data, Node next) {
             this.data = data;
             this.next = next;
         }
