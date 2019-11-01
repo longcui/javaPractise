@@ -7,6 +7,15 @@
     <groupId>no.long</groupId>
     <artifactId>javaPractise</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
+    <scm>
+        <connection>scm:git:https://github.com/longcui/javaPractise.git</connection>
+        <developerConnection>scm:git:git@github.com:longcui/javaPractise.git</developerConnection>
+        <url>https://github.com/longcui/javaPractise</url>
+        <tag>HEAD</tag>
+   </scm>
+
     <build>
         <plugins>
             <plugin>
