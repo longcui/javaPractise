@@ -3,7 +3,7 @@ name: Java Release
 on:
   pull_request:
     branches:
-      - release-v*
+      - master
 
 jobs:
 
