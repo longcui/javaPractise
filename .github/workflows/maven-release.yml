@@ -30,6 +30,6 @@ jobs:
         git config --local user.name "GitHub Action"
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git checkout -f master
-        mvn --batch-mode -Dmy.developer.connection=scm:git:https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}  -Dresume=false release:prepare release:perform   -Darguments="-DskipTests"
+        mvn --batch-mode -Dmy.developer.connection=scm:git:https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} -Plive -Dresume=false release:prepare release:perform   -Darguments="-DskipTests"
 
 
