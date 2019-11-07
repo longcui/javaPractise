@@ -35,3 +35,4 @@ jobs:
         mvn --batch-mode -Dmy.developer.connection=scm:git:https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} -DuseReleaseProfile=false -Dresume=false release:prepare release:perform   -Darguments="-DskipTests"
 
 
+
