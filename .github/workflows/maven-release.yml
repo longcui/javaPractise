@@ -23,13 +23,15 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
     - name: Release with Maven
+      env:
+        GITHUB_REF: ${{ github.ref }}
       run: |
         mkdir -p ~/.m2
         echo "<settings><servers><server><id>github</id><username>ghactions</username><password>${{secrets.GITHUB_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git checkout -f ${{ github.ref }}
+        git checkout -f $(echo ${GITHUB_REF:11})
         mvn --batch-mode -Dmy.developer.connection=scm:git:https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} -DuseReleaseProfile=false -Dresume=false release:prepare release:perform   -Darguments="-DskipTests"
 
 
