@@ -1,6 +1,5 @@
 package competition.hackerrank;
 
-import com.sun.source.tree.BinaryTree;
 import org.junit.Test;
 
 import java.math.BigDecimal;

@@ -8,15 +8,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <my.developer.connection />
     </properties>
 
 
     <scm>
-        <connection>scm:git:https://github.com/longcui/javaPractise.git</connection>
-        <developerConnection>scm:git:git@github.com:longcui/javaPractise.git</developerConnection>
-        <url>https://github.com/longcui/javaPractise</url>
-     <tag>HEAD</tag>
-  </scm>
+        <developerConnection>${my.developer.connection}</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <build>
         <plugins>
