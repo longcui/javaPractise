@@ -24,6 +24,8 @@ jobs:
           ${{ runner.os }}-maven-
     - name: Release with Maven
       run: |
+        mkdir -p ~/.m2
+       echo "<settings><servers><server><id>github</id><username>ghactions</username><password>${{secrets.GITHUB_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
