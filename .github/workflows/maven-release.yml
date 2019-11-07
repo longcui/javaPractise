@@ -1,7 +1,9 @@
 name: Java Release
 
-on: 
-  push
+on:
+  pull_request:
+    branches:
+      - release-v*
 
 jobs:
 
