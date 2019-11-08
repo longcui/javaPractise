@@ -40,4 +40,18 @@ jobs:
         git checkout -f master
         mvn --batch-mode -Dmy.developer.connection=scm:git:https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} -DuseReleaseProfile=false -Dresume=false release:prepare release:perform   -Darguments="-DskipTests"
 
+  merge-master-to-develop:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Nightly Merge
+        uses: robotology/gh-action-nightly-merge@v1.2.0
+        with:
+          stable_branch: 'master'
+          development_branch: 'develop'
+          allow_ff: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
