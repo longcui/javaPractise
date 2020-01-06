@@ -5,3 +5,8 @@
 /pom.xml.releaseBackup
 /release.properties
 
+.classpath
+.factorypath
+.project
+.settings/*
+.vscode/settings.json
