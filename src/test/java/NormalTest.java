@@ -9,6 +9,11 @@ import java.util.Set;
 
 public class NormalTest {
     @Test
+
+    /**
+     * all arrays in Java are objects1. Every Java array type has java.lang.Object as its supertype, and inherits the implementation of all methods in the Object API.
+     * arrays are passed by value ... but the value is the reference to the array.
+     */
     public void testPassByValue() {
         double[] changed = new double[2];
         changed[0] = 1;
