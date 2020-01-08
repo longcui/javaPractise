@@ -7,7 +7,8 @@ public class Calculation {
 
     // Complete the aVeryBigSum function below.
     static long aVeryBigSum(final long[] ar) {
-        Arrays.stream(ar)
+        LongStream longStream = Arrays.stream(ar);
+        return longStream.sum();
 
     }
 }
