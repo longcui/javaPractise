@@ -1,7 +1,6 @@
 package javaCore.linkedlist;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class InsertNodeAtGivenPosition {
 

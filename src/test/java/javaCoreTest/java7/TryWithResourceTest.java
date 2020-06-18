@@ -1,4 +1,4 @@
-package java7;
+package javaCoreTest.java7;
 
 import org.junit.Assert;
 import org.junit.Test;

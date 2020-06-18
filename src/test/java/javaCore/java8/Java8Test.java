@@ -1,4 +1,4 @@
-package java8;
+package javaCore.java8;
 
 import org.junit.Assert;
 import org.junit.Test;

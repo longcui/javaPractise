@@ -1,4 +1,4 @@
-package java8.calculation;
+package javaCore.java8.calculation;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,9 +1,15 @@
-package java8;
+package javaCore.java8;
 
-public class Java8Tester {
+public class LambdaExpressionTest {
 
+   /**
+    * Lambda expressions are used primarily to define inline implementation of a functional interface,
+    * i.e., an interface with a single method only.
+    * (If the interface has two methods, below function definition will fail)
+    * @param args
+    */
    public static void main(String args[]) {
-      Java8Tester tester = new Java8Tester();
+      LambdaExpressionTest tester = new LambdaExpressionTest();
 		
       //with type declaration
       MathOperation addition = (int a, int b) -> a + b;
